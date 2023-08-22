@@ -1,5 +1,4 @@
-const component = document.createElement("div");
+import dropDown from "./drop-down";
+import "./style.css";
 
-component.textContent = "Hello woooorld";
-
-document.body.appendChild(component);
+dropDown();
