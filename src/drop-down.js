@@ -7,7 +7,6 @@ const dropDowns = () => {
 
   const styleSheet = document.createElement("style");
   document.head.appendChild(styleSheet);
-  console.log(styleSheet.sheet.cssRules);
 
   styleSheet.sheet.insertRule(`.menu {
     display: grid; position: absolute;
@@ -59,7 +58,6 @@ const dropDowns = () => {
   divs.forEach((d) => {
     let showMenu = true;
     const menu = d.querySelector("ul");
-    // const items = [...menu.querySelectorAll("li")];
     const icon = document.createElement("i");
 
     icon.classList.add("fa-solid", "fa-circle-chevron-down", "fa-rotate-180");
@@ -73,7 +71,6 @@ const dropDowns = () => {
     } else if (d.classList.contains("right")) {
       leftOffset += -(menu.clientWidth + 16) / 2;
     }
-    console.log(menu.clientWidth);
     menu.style.left = `${leftOffset}px`;
 
     const dropListener = () => {
